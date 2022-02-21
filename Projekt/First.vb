@@ -1,8 +1,6 @@
 ﻿Public Class First
-    Private Sub First_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
-
+#Region "1. Read / Write Txt File"
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         TNotepad.Text = ""
     End Sub
@@ -49,49 +47,190 @@
     End Sub
 
     Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click
-        Clipboard.SetText(TNotepad.SelectedText)
+        Clipboard.SetText(TNotepad.Text)
     End Sub
 
     Private Sub CutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CutToolStripMenuItem.Click
-        Clipboard.SetText(TNotepad.SelectedText)
+        Clipboard.SetText(TNotepad.Text)
         TNotepad.SelectedText = ""
     End Sub
 
     Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
         TNotepad.SelectedText = Clipboard.GetText
     End Sub
+#End Region
 
-    Dim SecretNumber As Integer
-    Dim Attempts As Integer
-    Private Sub BTNStart_Click(sender As Object, e As EventArgs) Handles BTNStart.Click
-        Randomize()
-        SecretNumber = Int(Rnd() * 100)
-        Attempts = 0
-        LB1.Items.Clear()
-        LBL1.Text = "Attempts:" & Attempts.ToString
+#Region "2. Array, Collection"
+    Dim Arrayz(7) As String
+
+    Private Sub BTNTampilArray_Click(sender As Object, e As EventArgs) Handles BTNTampilArray.Click
+        For x = 1 To Arrayz.Length
+            Arrayz(x) = InputBox("Masukkeun...!")
+        Next
+
+        For Each y In Arrayz
+            LBArray.Items.Add(y)
+        Next
     End Sub
 
-    Private Sub BTNGuess_Click(sender As Object, e As EventArgs) Handles BTNGuess.Click
+
+    ' we define two arrays one to store names, another to store marks
+    Dim Names(9) As String
+    Dim Marks(9) As Integer
+    ' we define a variable to store how many element of the array we 
+    ' used
+    Dim StCount As Integer = 0
+    Private Sub BTNInputSiswa_Click(sender As Object, e As EventArgs) Handles BTNInputSiswa.Click
+        ' read the name and mark and put them in the next empty slot
+        Names(StCount) = InputBox("Masukkan Nama Siswa")
+        Marks(StCount) = InputBox("Masukkan Nilai")
+        ' the new name and mark should be displayed on the data grid
+        DGV1.Rows.Add(Names(StCount), Marks(StCount))
+        ' move the counter to the next empty slot
+        StCount += 1
+    End Sub
+
+    Private Sub BTNTerbesar_Click(sender As Object, e As EventArgs) Handles BTNTerbesar.Click
+        ' find the maximum mark
+        Dim I As Integer ' used for counting
+        Dim MaxPos As Integer ' used to remember the index of 
+        ' maximum mark
+        MaxPos = 0 ' assume first mark is the maximum
+        For I = 1 To StCount - 1 ' loop over all other slots
+            ' is there an element with a mark greater than the current maximum?
+            If Marks(I) > Marks(MaxPos) Then
+                MaxPos = I ' we found a new max, 
+                ' update our maximum
+            End If
+        Next
+        MsgBox("siswa " & Names(MaxPos) & " nilainya tertinggi!")
+        'MsgBox("siswa " & Marks.Max & " nilainya tertinggi!")
+    End Sub
+
+    Private Sub BTNTerkecil_Click(sender As Object, e As EventArgs) Handles BTNTerkecil.Click
+        ' find minimum
+        ' it is identical to the previous, except for the condition
+        Dim I As Integer
+        Dim MinPos As Integer
+        MinPos = 0
+        For I = 1 To StCount - 1
+            If Marks(I) < Marks(MinPos) Then
+                MinPos = I
+            End If
+        Next
+        MsgBox("siswa " & Names(MinPos) & " nilainya terendah!")
+        'MsgBox("siswa " & Marks.Min & " nilainya terendah!")
+    End Sub
+
+    Private Sub BTNRataRata_Click(sender As Object, e As EventArgs) Handles BTNRataRata.Click
+        Dim I As Integer ' I is counter
+        Dim AVG As Double ' Used to store the sum and finding 
+        ' the average
+        AVG = 0 ' The avg is zero
+        For I = 0 To StCount - 1 ' Loop over all elements in the 
+            ' array
+            AVG += Marks(I) ' Add each element to the some of 
+            ' the previous ones
+        Next
+        AVG /= StCount ' divide the total by number of 
+        ' elements to get the average
+        MsgBox("rata-rata nilai:" & AVG)
+    End Sub
+
+    Private Sub BTNGetUpperBound_Click(sender As Object, e As EventArgs) Handles BTNGetUpperBound.Click
+        MsgBox(Names.GetUpperBound(0))
+    End Sub
+
+    'Collection
+    Dim MyCollection As New Collection
+
+    Private Sub BTNClear_Click(sender As Object, e As EventArgs) Handles BTNClear.Click
+        ' this method clears all the elements in the collection
+        MyCollection.Clear()
+    End Sub
+
+    Private Sub BTNTambah_Click(sender As Object, e As EventArgs) Handles BTNTambah.Click
+        ' read a name
+        Dim Name As String
+        Name = InputBox("enter a name")
+        ' add the name into the list
+        MyCollection.Add(Name)
+    End Sub
+
+    Private Sub BTNGetNumber_Click(sender As Object, e As EventArgs) Handles BTNGetNumber.Click
+        MsgBox("the number of items is:" & MyCollection.Count)
+    End Sub
+
+    Private Sub BTNViewItem_Click(sender As Object, e As EventArgs) Handles BTNViewItem.Click
+        ' clear old content
+        LBCollection.Items.Clear()
+        ' insert the items into the list box
+        Dim I As Integer
+        For I = 1 To MyCollection.Count
+            LBCollection.Items.Add(MyCollection(I))
+        Next
+    End Sub
+
+    Private Sub BTNRemove_Click(sender As Object, e As EventArgs) Handles BTNRemove.Click
+        ' get element position
+        Dim I As Integer
+        I = InputBox("enter the element number you want to remove:")
+        MyCollection.Remove(I)
+    End Sub
+
+    Private Sub BTNReplace_Click(sender As Object, e As EventArgs) Handles BTNReplace.Click
+        ' get element position
+        Dim I As Integer
+        Dim N As String
+        I = InputBox("enter the element number:")
+        N = InputBox("enter the new name:")
+        MyCollection.Add(N, , , I)
+        MyCollection.Remove(I)
+    End Sub
+#End Region
+
+#Region "3. Random"
+    Dim AngkaRahasia As Integer
+    Dim Percobaan As Integer
+    Private Sub BTNStart_Click(sender As Object, e As EventArgs) Handles BTNMulai.Click
+        Randomize()
+        AngkaRahasia = Int(Rnd() * 100)
+        Percobaan = 0
+        LB1.Items.Clear()
+        LBL1.Text = "Percobaan ke-" & Percobaan.ToString
+    End Sub
+
+    Private Sub BTNGuess_Click(sender As Object, e As EventArgs) Handles BTNTebak.Click
         Dim MyNumber As Integer
-        Dim Tmp As String = InputBox("Enter a number between 1 and 100", "Guessing game")
+        Dim Tmp As String = InputBox("Masukin angka antara 1 sampai 100", "Tebak Angka")
         If IsNumeric(Tmp) Then
             MyNumber = Tmp
         Else
             MsgBox("harus angka")
             Exit Sub
         End If
-        If MyNumber = SecretNumber Then
-            MsgBox("Anda Benar!")
-        ElseIf MyNumber > SecretNumber Then
-            LB1.Items.Add("kecilin")
+        If MyNumber = AngkaRahasia Then
+            MsgBox("Jawabannya " & AngkaRahasia, MsgBoxStyle.OkOnly, "Anda Benar!")
+        ElseIf MyNumber > AngkaRahasia Then
+            LB1.Items.Add("Kecilin!")
         Else
-            LB1.Items.Add("gedein")
+            LB1.Items.Add("Gedein!")
         End If
-        Attempts += 1
-        LBL1.Text = "Attempts:" & Attempts.ToString
+        Percobaan += 1
+        LBL1.Text = "Percobaan ke-" & Percobaan.ToString
     End Sub
 
-    Private Sub KryptonButton1_Click(sender As Object, e As EventArgs) Handles KryptonButton1.Click
+    Shared Acak As New Random()
+    Private Sub BTNRandom_Click(sender As Object, e As EventArgs) Handles BTNRandom.Click
+        Dim i As Integer
+        For i = 0 To 20
+            MsgBox(Convert.ToString(Acak.Next(10, 21))) 'Muncul angka 10 sampai 20
+        Next
+    End Sub
+#End Region
+
+#Region "4. Bilangan Prima"
+    Private Sub BTNBilanganPrima_Click(sender As Object, e As EventArgs) Handles BTNBilanganPrima.Click
         Dim MyNumber As Integer
         Dim RemainderIsZeroFlag As Boolean
         Dim I As Integer
@@ -104,10 +243,10 @@
         For I = 2 To MyNumber - 1
             ' if the condition is not satisfied
             If MyNumber Mod I = 0 Then
-                    ' mark that the remainder is not zero
-                    RemainderIsZeroFlag = True
-                End If
-            Next
+                ' mark that the remainder is not zero
+                RemainderIsZeroFlag = True
+            End If
+        Next
         ' if there was any remainder then tell the user
         ' that the number is not prime, else it is.
         If RemainderIsZeroFlag Then
@@ -116,4 +255,82 @@
             MsgBox("The number is prime")
         End If
     End Sub
+#End Region
+
+#Region "5. Functions"
+    Function Factorial(N As Integer) As Double
+        Dim F As Double ' the factorial total
+        Dim I As Integer ' the counter
+        F = 1 ' the initial value of F
+        For I = 1 To N ' this loop to calculate the factorial
+            F *= I
+        Next
+        Return F ' return the result 
+    End Function
+
+    Private Sub BTNFactorial_Click(sender As Object, e As EventArgs) Handles BTNFactorial.Click
+        Dim sum = 4
+        MsgBox(Factorial(8))
+        MsgBox($"The sum of the values is {sum:N0}")
+    End Sub
+
+    ' the max value in an array
+    Function GetMax(ByVal A() As Integer) As Integer
+        Dim I As Integer
+        Dim Max As Integer
+        Max = A(0) ' assume the max value is the 
+        ' first value
+        For I = 1 To A.Length - 1 ' loop over all other values in 
+            ' an array
+            If Max < A(I) Then ' if we find another value 
+                ' larger than max then
+                Max = A(I) ' update max 
+            End If
+        Next
+        Return Max ' return the result
+    End Function
+    ' the avg value of an array
+    Function GetAVG(ByVal A() As Integer) As Integer
+        Dim I As Integer
+        Dim sum As Integer
+        sum = 0 ' assume the sum value is 0
+        For I = 0 To A.Length - 1 ' loop over all other values in 
+            ' an array
+            sum = sum + A(I)
+        Next
+        Return sum / A.Length ' return the result
+    End Function
+    ' read array
+    Function ReadArray() As Integer()
+        ' the counter
+        Dim I As Integer
+        ' the number of elements
+        Dim N As Integer
+        ' read the number of elements from the display
+        N = InputBox("how many elements in the array")
+        ' create the array
+        Dim A(0 To N - 1) As Integer
+        ' read the elements of the array
+        For I = 0 To N - 1
+            A(I) = InputBox("enter the element:" & I.ToString)
+        Next
+        ' return the result
+        Return A
+    End Function
+
+    Dim Arrayx() As Integer = {44, 33, 22, 11, 99, 88, 77, 66, 55}
+
+    Private Sub BTNGetMax_Click(sender As Object, e As EventArgs) Handles BTNGetMax.Click
+        MsgBox(GetMax(Arrayx))
+    End Sub
+
+    Private Sub BTNGetAVG_Click(sender As Object, e As EventArgs) Handles BTNGetAVG.Click
+        MsgBox(GetAVG(Arrayx))
+    End Sub
+
+    Private Sub BTNReadArray_Click(sender As Object, e As EventArgs) Handles BTNReadArray.Click
+        ReadArray()
+    End Sub
+
+#End Region
 End Class
