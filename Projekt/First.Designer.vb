@@ -60,6 +60,7 @@ Partial Class First
         Me.KryptonGroup2 = New Krypton.Toolkit.KryptonGroup()
         Me.KryptonBorderEdge3 = New Krypton.Toolkit.KryptonBorderEdge()
         Me.KryptonLabel2 = New Krypton.Toolkit.KryptonLabel()
+        Me.BTNRandom = New Krypton.Toolkit.KryptonButton()
         Me.KryptonGroup3 = New Krypton.Toolkit.KryptonGroup()
         Me.PemisahV = New Krypton.Toolkit.KryptonBorderEdge()
         Me.BTNReplace = New Krypton.Toolkit.KryptonButton()
@@ -70,7 +71,7 @@ Partial Class First
         Me.BTNClear = New Krypton.Toolkit.KryptonButton()
         Me.KryptonButton5 = New Krypton.Toolkit.KryptonButton()
         Me.KryptonButton6 = New Krypton.Toolkit.KryptonButton()
-        Me.KryptonButton7 = New Krypton.Toolkit.KryptonButton()
+        Me.BTNLength = New Krypton.Toolkit.KryptonButton()
         Me.BTNGetUpperBound = New Krypton.Toolkit.KryptonButton()
         Me.BTNRataRata = New Krypton.Toolkit.KryptonButton()
         Me.DGV1 = New Krypton.Toolkit.KryptonDataGridView()
@@ -85,16 +86,21 @@ Partial Class First
         Me.KryptonBorderEdge4 = New Krypton.Toolkit.KryptonBorderEdge()
         Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
         Me.KryptonGroup4 = New Krypton.Toolkit.KryptonGroup()
-        Me.KryptonBorderEdge5 = New Krypton.Toolkit.KryptonBorderEdge()
-        Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
-        Me.KryptonGroup5 = New Krypton.Toolkit.KryptonGroup()
+        Me.KryptonBorderEdge7 = New Krypton.Toolkit.KryptonBorderEdge()
+        Me.KryptonBorderEdge6 = New Krypton.Toolkit.KryptonBorderEdge()
+        Me.KryptonBorderEdge1 = New Krypton.Toolkit.KryptonBorderEdge()
+        Me.LBFunctions = New Krypton.Toolkit.KryptonListBox()
         Me.BTNReadArray = New Krypton.Toolkit.KryptonButton()
+        Me.KryptonBorderEdge5 = New Krypton.Toolkit.KryptonBorderEdge()
         Me.BTNGetAVG = New Krypton.Toolkit.KryptonButton()
+        Me.KryptonLabel4 = New Krypton.Toolkit.KryptonLabel()
+        Me.KryptonButton2 = New Krypton.Toolkit.KryptonButton()
+        Me.BTNByValByRef = New Krypton.Toolkit.KryptonButton()
+        Me.KryptonButton1 = New Krypton.Toolkit.KryptonButton()
+        Me.BTNSwap = New Krypton.Toolkit.KryptonButton()
         Me.BTNGetMax = New Krypton.Toolkit.KryptonButton()
         Me.BTNFactorial = New Krypton.Toolkit.KryptonButton()
-        Me.KryptonBorderEdge6 = New Krypton.Toolkit.KryptonBorderEdge()
-        Me.KryptonLabel5 = New Krypton.Toolkit.KryptonLabel()
-        Me.BTNRandom = New Krypton.Toolkit.KryptonButton()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.KryptonGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KryptonGroup1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,10 +119,6 @@ Partial Class First
         CType(Me.KryptonGroup4.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.KryptonGroup4.Panel.SuspendLayout()
         Me.KryptonGroup4.SuspendLayout()
-        CType(Me.KryptonGroup5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KryptonGroup5.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.KryptonGroup5.Panel.SuspendLayout()
-        Me.KryptonGroup5.SuspendLayout()
         Me.SuspendLayout()
         '
         'PaletPrimer
@@ -392,7 +394,7 @@ Partial Class First
         '
         'BTNBilanganPrima
         '
-        Me.BTNBilanganPrima.Location = New System.Drawing.Point(105, 144)
+        Me.BTNBilanganPrima.Location = New System.Drawing.Point(12, 144)
         Me.BTNBilanganPrima.Name = "BTNBilanganPrima"
         Me.BTNBilanganPrima.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.BTNBilanganPrima.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
@@ -542,6 +544,33 @@ Partial Class First
         Me.KryptonLabel2.TabIndex = 28
         Me.KryptonLabel2.Values.Text = "3.) Random"
         '
+        'BTNRandom
+        '
+        Me.BTNRandom.Location = New System.Drawing.Point(144, 144)
+        Me.BTNRandom.Name = "BTNRandom"
+        Me.BTNRandom.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNRandom.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNRandom.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.BTNRandom.OverrideFocus.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
+        Me.BTNRandom.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
+        Me.BTNRandom.Size = New System.Drawing.Size(76, 24)
+        Me.BTNRandom.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNRandom.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNRandom.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.BTNRandom.StateCommon.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
+        Me.BTNRandom.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.BTNRandom.StateCommon.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNRandom.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
+        Me.BTNRandom.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.BTNRandom.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.BTNRandom.StatePressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNRandom.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.BTNRandom.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.BTNRandom.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNRandom.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.BTNRandom.TabIndex = 135
+        Me.BTNRandom.Values.Text = "Random"
+        '
         'KryptonGroup3
         '
         Me.KryptonGroup3.Location = New System.Drawing.Point(371, 32)
@@ -559,7 +588,7 @@ Partial Class First
         Me.KryptonGroup3.Panel.Controls.Add(Me.BTNClear)
         Me.KryptonGroup3.Panel.Controls.Add(Me.KryptonButton5)
         Me.KryptonGroup3.Panel.Controls.Add(Me.KryptonButton6)
-        Me.KryptonGroup3.Panel.Controls.Add(Me.KryptonButton7)
+        Me.KryptonGroup3.Panel.Controls.Add(Me.BTNLength)
         Me.KryptonGroup3.Panel.Controls.Add(Me.BTNGetUpperBound)
         Me.KryptonGroup3.Panel.Controls.Add(Me.BTNRataRata)
         Me.KryptonGroup3.Panel.Controls.Add(Me.DGV1)
@@ -807,32 +836,32 @@ Partial Class First
         Me.KryptonButton6.TabIndex = 136
         Me.KryptonButton6.Values.Text = ""
         '
-        'KryptonButton7
+        'BTNLength
         '
-        Me.KryptonButton7.Location = New System.Drawing.Point(3, 184)
-        Me.KryptonButton7.Name = "KryptonButton7"
-        Me.KryptonButton7.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.KryptonButton7.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.KryptonButton7.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.KryptonButton7.OverrideFocus.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.KryptonButton7.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
-        Me.KryptonButton7.Size = New System.Drawing.Size(121, 24)
-        Me.KryptonButton7.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.KryptonButton7.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.KryptonButton7.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.KryptonButton7.StateCommon.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.KryptonButton7.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.KryptonButton7.StateCommon.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.KryptonButton7.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
-        Me.KryptonButton7.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.White
-        Me.KryptonButton7.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(205, Byte), Integer))
-        Me.KryptonButton7.StatePressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.KryptonButton7.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White
-        Me.KryptonButton7.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.KryptonButton7.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.KryptonButton7.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.KryptonButton7.TabIndex = 137
-        Me.KryptonButton7.Values.Text = ""
+        Me.BTNLength.Location = New System.Drawing.Point(3, 184)
+        Me.BTNLength.Name = "BTNLength"
+        Me.BTNLength.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNLength.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNLength.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.BTNLength.OverrideFocus.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
+        Me.BTNLength.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
+        Me.BTNLength.Size = New System.Drawing.Size(121, 24)
+        Me.BTNLength.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNLength.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNLength.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.BTNLength.StateCommon.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
+        Me.BTNLength.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.BTNLength.StateCommon.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNLength.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
+        Me.BTNLength.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.BTNLength.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.BTNLength.StatePressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNLength.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.BTNLength.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.BTNLength.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNLength.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.BTNLength.TabIndex = 137
+        Me.BTNLength.Values.Text = "Length"
         '
         'BTNGetUpperBound
         '
@@ -1138,16 +1167,29 @@ Partial Class First
         '
         'KryptonGroup4
         '
-        Me.KryptonGroup4.Location = New System.Drawing.Point(371, 338)
+        Me.KryptonGroup4.Location = New System.Drawing.Point(248, 338)
         Me.KryptonGroup4.Name = "KryptonGroup4"
         Me.KryptonGroup4.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
         '
         'KryptonGroup4.Panel
         '
+        Me.KryptonGroup4.Panel.Controls.Add(Me.ListBox1)
+        Me.KryptonGroup4.Panel.Controls.Add(Me.KryptonBorderEdge7)
+        Me.KryptonGroup4.Panel.Controls.Add(Me.KryptonBorderEdge6)
+        Me.KryptonGroup4.Panel.Controls.Add(Me.KryptonBorderEdge1)
+        Me.KryptonGroup4.Panel.Controls.Add(Me.LBFunctions)
+        Me.KryptonGroup4.Panel.Controls.Add(Me.BTNReadArray)
         Me.KryptonGroup4.Panel.Controls.Add(Me.KryptonBorderEdge5)
+        Me.KryptonGroup4.Panel.Controls.Add(Me.BTNGetAVG)
         Me.KryptonGroup4.Panel.Controls.Add(Me.KryptonLabel4)
+        Me.KryptonGroup4.Panel.Controls.Add(Me.KryptonButton2)
+        Me.KryptonGroup4.Panel.Controls.Add(Me.BTNByValByRef)
+        Me.KryptonGroup4.Panel.Controls.Add(Me.KryptonButton1)
+        Me.KryptonGroup4.Panel.Controls.Add(Me.BTNSwap)
+        Me.KryptonGroup4.Panel.Controls.Add(Me.BTNGetMax)
         Me.KryptonGroup4.Panel.Controls.Add(Me.BTNBilanganPrima)
-        Me.KryptonGroup4.Size = New System.Drawing.Size(357, 300)
+        Me.KryptonGroup4.Panel.Controls.Add(Me.BTNFactorial)
+        Me.KryptonGroup4.Size = New System.Drawing.Size(844, 300)
         Me.KryptonGroup4.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.KryptonGroup4.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
         Me.KryptonGroup4.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
@@ -1157,57 +1199,68 @@ Partial Class First
         Me.KryptonGroup4.StateCommon.Border.Width = 3
         Me.KryptonGroup4.TabIndex = 107
         '
-        'KryptonBorderEdge5
+        'KryptonBorderEdge7
         '
-        Me.KryptonBorderEdge5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.KryptonBorderEdge5.Location = New System.Drawing.Point(0, 28)
-        Me.KryptonBorderEdge5.Name = "KryptonBorderEdge5"
-        Me.KryptonBorderEdge5.Size = New System.Drawing.Size(351, 3)
-        Me.KryptonBorderEdge5.StateCommon.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.KryptonBorderEdge5.StateCommon.Width = 3
-        Me.KryptonBorderEdge5.Text = "KryptonBorderEdge5"
+        Me.KryptonBorderEdge7.Location = New System.Drawing.Point(591, 30)
+        Me.KryptonBorderEdge7.Name = "KryptonBorderEdge7"
+        Me.KryptonBorderEdge7.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.KryptonBorderEdge7.Size = New System.Drawing.Size(3, 264)
+        Me.KryptonBorderEdge7.StateCommon.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.KryptonBorderEdge7.StateCommon.Width = 3
+        Me.KryptonBorderEdge7.Text = "KryptonBorderEdge4"
         '
-        'KryptonLabel4
+        'KryptonBorderEdge6
         '
-        Me.KryptonLabel4.AutoSize = False
-        Me.KryptonLabel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.KryptonLabel4.Location = New System.Drawing.Point(0, 0)
-        Me.KryptonLabel4.Name = "KryptonLabel4"
-        Me.KryptonLabel4.Size = New System.Drawing.Size(351, 28)
-        Me.KryptonLabel4.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.KryptonLabel4.StateCommon.ShortText.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.KryptonLabel4.StateCommon.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.KryptonLabel4.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center
-        Me.KryptonLabel4.TabIndex = 28
-        Me.KryptonLabel4.Values.Text = "4.) Mencari Bilangan Prima"
+        Me.KryptonBorderEdge6.Location = New System.Drawing.Point(438, 30)
+        Me.KryptonBorderEdge6.Name = "KryptonBorderEdge6"
+        Me.KryptonBorderEdge6.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.KryptonBorderEdge6.Size = New System.Drawing.Size(3, 264)
+        Me.KryptonBorderEdge6.StateCommon.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.KryptonBorderEdge6.StateCommon.Width = 3
+        Me.KryptonBorderEdge6.Text = "KryptonBorderEdge4"
         '
-        'KryptonGroup5
+        'KryptonBorderEdge1
         '
-        Me.KryptonGroup5.Location = New System.Drawing.Point(735, 338)
-        Me.KryptonGroup5.Name = "KryptonGroup5"
-        Me.KryptonGroup5.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
+        Me.KryptonBorderEdge1.Location = New System.Drawing.Point(160, 30)
+        Me.KryptonBorderEdge1.Name = "KryptonBorderEdge1"
+        Me.KryptonBorderEdge1.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.KryptonBorderEdge1.Size = New System.Drawing.Size(3, 264)
+        Me.KryptonBorderEdge1.StateCommon.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.KryptonBorderEdge1.StateCommon.Width = 3
+        Me.KryptonBorderEdge1.Text = "KryptonBorderEdge4"
         '
-        'KryptonGroup5.Panel
+        'LBFunctions
         '
-        Me.KryptonGroup5.Panel.Controls.Add(Me.BTNReadArray)
-        Me.KryptonGroup5.Panel.Controls.Add(Me.BTNGetAVG)
-        Me.KryptonGroup5.Panel.Controls.Add(Me.BTNGetMax)
-        Me.KryptonGroup5.Panel.Controls.Add(Me.BTNFactorial)
-        Me.KryptonGroup5.Panel.Controls.Add(Me.KryptonBorderEdge6)
-        Me.KryptonGroup5.Panel.Controls.Add(Me.KryptonLabel5)
-        Me.KryptonGroup5.Size = New System.Drawing.Size(357, 300)
-        Me.KryptonGroup5.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.KryptonGroup5.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.KryptonGroup5.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.KryptonGroup5.StateCommon.Border.DrawBorders = CType((((Krypton.Toolkit.PaletteDrawBorders.Top Or Krypton.Toolkit.PaletteDrawBorders.Bottom) _
-            Or Krypton.Toolkit.PaletteDrawBorders.Left) _
-            Or Krypton.Toolkit.PaletteDrawBorders.Right), Krypton.Toolkit.PaletteDrawBorders)
-        Me.KryptonGroup5.StateCommon.Border.Width = 3
-        Me.KryptonGroup5.TabIndex = 106
+        Me.LBFunctions.Location = New System.Drawing.Point(278, 34)
+        Me.LBFunctions.Name = "LBFunctions"
+        Me.LBFunctions.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
+        Me.LBFunctions.Size = New System.Drawing.Size(143, 257)
+        Me.LBFunctions.StateCheckedNormal.Item.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.LBFunctions.StateCheckedNormal.Item.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.LBFunctions.StateCheckedNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.LBFunctions.StateCheckedNormal.Item.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.LBFunctions.StateCheckedPressed.Item.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.LBFunctions.StateCheckedPressed.Item.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.LBFunctions.StateCheckedPressed.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.LBFunctions.StateCheckedPressed.Item.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.LBFunctions.StateCheckedTracking.Item.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.LBFunctions.StateCheckedTracking.Item.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.LBFunctions.StateCheckedTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.LBFunctions.StateCheckedTracking.Item.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.LBFunctions.StateCheckedTracking.Item.Content.ShortText.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.LBFunctions.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.LBFunctions.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.LBFunctions.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.LBFunctions.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.LBFunctions.StateCommon.Item.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBFunctions.StateTracking.Item.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.LBFunctions.StateTracking.Item.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.LBFunctions.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.LBFunctions.TabIndex = 149
         '
         'BTNReadArray
         '
-        Me.BTNReadArray.Location = New System.Drawing.Point(3, 124)
+        Me.BTNReadArray.Location = New System.Drawing.Point(177, 182)
         Me.BTNReadArray.Name = "BTNReadArray"
         Me.BTNReadArray.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.BTNReadArray.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
@@ -1232,9 +1285,19 @@ Partial Class First
         Me.BTNReadArray.TabIndex = 147
         Me.BTNReadArray.Values.Text = "ReadArray?"
         '
+        'KryptonBorderEdge5
+        '
+        Me.KryptonBorderEdge5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.KryptonBorderEdge5.Location = New System.Drawing.Point(0, 28)
+        Me.KryptonBorderEdge5.Name = "KryptonBorderEdge5"
+        Me.KryptonBorderEdge5.Size = New System.Drawing.Size(838, 3)
+        Me.KryptonBorderEdge5.StateCommon.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.KryptonBorderEdge5.StateCommon.Width = 3
+        Me.KryptonBorderEdge5.Text = "KryptonBorderEdge5"
+        '
         'BTNGetAVG
         '
-        Me.BTNGetAVG.Location = New System.Drawing.Point(3, 94)
+        Me.BTNGetAVG.Location = New System.Drawing.Point(177, 152)
         Me.BTNGetAVG.Name = "BTNGetAVG"
         Me.BTNGetAVG.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.BTNGetAVG.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
@@ -1259,9 +1322,131 @@ Partial Class First
         Me.BTNGetAVG.TabIndex = 147
         Me.BTNGetAVG.Values.Text = "GetAVG"
         '
+        'KryptonLabel4
+        '
+        Me.KryptonLabel4.AutoSize = False
+        Me.KryptonLabel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.KryptonLabel4.Location = New System.Drawing.Point(0, 0)
+        Me.KryptonLabel4.Name = "KryptonLabel4"
+        Me.KryptonLabel4.Size = New System.Drawing.Size(838, 28)
+        Me.KryptonLabel4.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.KryptonLabel4.StateCommon.ShortText.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonLabel4.StateCommon.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.KryptonLabel4.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center
+        Me.KryptonLabel4.TabIndex = 28
+        Me.KryptonLabel4.Values.Text = "4.) Bilangan Prima, Functions, ByVal, ByRef, Do"
+        '
+        'KryptonButton2
+        '
+        Me.KryptonButton2.Location = New System.Drawing.Point(722, 37)
+        Me.KryptonButton2.Name = "KryptonButton2"
+        Me.KryptonButton2.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.KryptonButton2.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonButton2.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.KryptonButton2.OverrideFocus.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
+        Me.KryptonButton2.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
+        Me.KryptonButton2.Size = New System.Drawing.Size(77, 24)
+        Me.KryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.KryptonButton2.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonButton2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.KryptonButton2.StateCommon.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
+        Me.KryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.KryptonButton2.StateCommon.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.KryptonButton2.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
+        Me.KryptonButton2.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.KryptonButton2.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.KryptonButton2.StatePressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonButton2.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.KryptonButton2.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.KryptonButton2.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonButton2.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.KryptonButton2.TabIndex = 135
+        Me.KryptonButton2.Values.Text = ""
+        '
+        'BTNByValByRef
+        '
+        Me.BTNByValByRef.Location = New System.Drawing.Point(453, 135)
+        Me.BTNByValByRef.Name = "BTNByValByRef"
+        Me.BTNByValByRef.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNByValByRef.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNByValByRef.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.BTNByValByRef.OverrideFocus.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
+        Me.BTNByValByRef.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
+        Me.BTNByValByRef.Size = New System.Drawing.Size(121, 24)
+        Me.BTNByValByRef.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNByValByRef.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNByValByRef.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.BTNByValByRef.StateCommon.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
+        Me.BTNByValByRef.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.BTNByValByRef.StateCommon.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNByValByRef.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
+        Me.BTNByValByRef.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.BTNByValByRef.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.BTNByValByRef.StatePressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNByValByRef.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.BTNByValByRef.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.BTNByValByRef.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNByValByRef.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.BTNByValByRef.TabIndex = 135
+        Me.BTNByValByRef.Values.Text = "Test"
+        '
+        'KryptonButton1
+        '
+        Me.KryptonButton1.Location = New System.Drawing.Point(639, 37)
+        Me.KryptonButton1.Name = "KryptonButton1"
+        Me.KryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.KryptonButton1.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonButton1.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.KryptonButton1.OverrideFocus.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
+        Me.KryptonButton1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
+        Me.KryptonButton1.Size = New System.Drawing.Size(77, 24)
+        Me.KryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.KryptonButton1.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.KryptonButton1.StateCommon.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
+        Me.KryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.KryptonButton1.StateCommon.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.KryptonButton1.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
+        Me.KryptonButton1.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.KryptonButton1.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.KryptonButton1.StatePressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonButton1.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.KryptonButton1.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.KryptonButton1.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonButton1.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.KryptonButton1.TabIndex = 136
+        Me.KryptonButton1.Values.Text = ""
+        '
+        'BTNSwap
+        '
+        Me.BTNSwap.Location = New System.Drawing.Point(453, 165)
+        Me.BTNSwap.Name = "BTNSwap"
+        Me.BTNSwap.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNSwap.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNSwap.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.BTNSwap.OverrideFocus.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
+        Me.BTNSwap.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
+        Me.BTNSwap.Size = New System.Drawing.Size(121, 24)
+        Me.BTNSwap.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNSwap.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNSwap.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.BTNSwap.StateCommon.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
+        Me.BTNSwap.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.BTNSwap.StateCommon.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNSwap.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
+        Me.BTNSwap.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.BTNSwap.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.BTNSwap.StatePressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNSwap.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.BTNSwap.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.BTNSwap.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.BTNSwap.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.BTNSwap.TabIndex = 136
+        Me.BTNSwap.Values.Text = "Swap Function"
+        '
         'BTNGetMax
         '
-        Me.BTNGetMax.Location = New System.Drawing.Point(3, 64)
+        Me.BTNGetMax.Location = New System.Drawing.Point(177, 122)
         Me.BTNGetMax.Name = "BTNGetMax"
         Me.BTNGetMax.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.BTNGetMax.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
@@ -1288,7 +1473,7 @@ Partial Class First
         '
         'BTNFactorial
         '
-        Me.BTNFactorial.Location = New System.Drawing.Point(3, 34)
+        Me.BTNFactorial.Location = New System.Drawing.Point(177, 34)
         Me.BTNFactorial.Name = "BTNFactorial"
         Me.BTNFactorial.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.BTNFactorial.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
@@ -1313,63 +1498,19 @@ Partial Class First
         Me.BTNFactorial.TabIndex = 145
         Me.BTNFactorial.Values.Text = "Factorial"
         '
-        'KryptonBorderEdge6
+        'ListBox1
         '
-        Me.KryptonBorderEdge6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.KryptonBorderEdge6.Location = New System.Drawing.Point(0, 28)
-        Me.KryptonBorderEdge6.Name = "KryptonBorderEdge6"
-        Me.KryptonBorderEdge6.Size = New System.Drawing.Size(351, 3)
-        Me.KryptonBorderEdge6.StateCommon.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.KryptonBorderEdge6.StateCommon.Width = 3
-        Me.KryptonBorderEdge6.Text = "KryptonBorderEdge6"
-        '
-        'KryptonLabel5
-        '
-        Me.KryptonLabel5.AutoSize = False
-        Me.KryptonLabel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.KryptonLabel5.Location = New System.Drawing.Point(0, 0)
-        Me.KryptonLabel5.Name = "KryptonLabel5"
-        Me.KryptonLabel5.Size = New System.Drawing.Size(351, 28)
-        Me.KryptonLabel5.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.KryptonLabel5.StateCommon.ShortText.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.KryptonLabel5.StateCommon.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.KryptonLabel5.StateCommon.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center
-        Me.KryptonLabel5.TabIndex = 28
-        Me.KryptonLabel5.Values.Text = "5.) Functions"
-        '
-        'BTNRandom
-        '
-        Me.BTNRandom.Location = New System.Drawing.Point(142, 144)
-        Me.BTNRandom.Name = "BTNRandom"
-        Me.BTNRandom.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNRandom.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTNRandom.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTNRandom.OverrideFocus.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.BTNRandom.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
-        Me.BTNRandom.Size = New System.Drawing.Size(76, 24)
-        Me.BTNRandom.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNRandom.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTNRandom.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTNRandom.StateCommon.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.BTNRandom.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.BTNRandom.StateCommon.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNRandom.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
-        Me.BTNRandom.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.White
-        Me.BTNRandom.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(205, Byte), Integer))
-        Me.BTNRandom.StatePressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTNRandom.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White
-        Me.BTNRandom.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTNRandom.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTNRandom.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.BTNRandom.TabIndex = 135
-        Me.BTNRandom.Values.Text = "Random"
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(639, 67)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(160, 199)
+        Me.ListBox1.TabIndex = 151
         '
         'First
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.Controls.Add(Me.KryptonGroup4)
-        Me.Controls.Add(Me.KryptonGroup5)
         Me.Controls.Add(Me.KryptonGroup3)
         Me.Controls.Add(Me.KryptonGroup2)
         Me.Controls.Add(Me.KryptonGroup1)
@@ -1400,11 +1541,6 @@ Partial Class First
         Me.KryptonGroup4.Panel.PerformLayout()
         CType(Me.KryptonGroup4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.KryptonGroup4.ResumeLayout(False)
-        CType(Me.KryptonGroup5.Panel, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.KryptonGroup5.Panel.ResumeLayout(False)
-        Me.KryptonGroup5.Panel.PerformLayout()
-        CType(Me.KryptonGroup5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.KryptonGroup5.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1448,9 +1584,6 @@ Partial Class First
     Friend WithEvents KryptonGroup4 As Krypton.Toolkit.KryptonGroup
     Friend WithEvents KryptonBorderEdge5 As Krypton.Toolkit.KryptonBorderEdge
     Friend WithEvents KryptonLabel4 As Krypton.Toolkit.KryptonLabel
-    Friend WithEvents KryptonGroup5 As Krypton.Toolkit.KryptonGroup
-    Friend WithEvents KryptonBorderEdge6 As Krypton.Toolkit.KryptonBorderEdge
-    Friend WithEvents KryptonLabel5 As Krypton.Toolkit.KryptonLabel
     Friend WithEvents TambahkanTandaANDShift5UntukMemberiGarisBawahPadaTulisanTekanAltHurufYgDigarisbawahUntukMemilihToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SeparatorPakaiToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TNotepad As Krypton.Toolkit.KryptonTextBox
@@ -1463,7 +1596,7 @@ Partial Class First
     Friend WithEvents DGV1 As Krypton.Toolkit.KryptonDataGridView
     Friend WithEvents KryptonButton5 As Krypton.Toolkit.KryptonButton
     Friend WithEvents KryptonButton6 As Krypton.Toolkit.KryptonButton
-    Friend WithEvents KryptonButton7 As Krypton.Toolkit.KryptonButton
+    Friend WithEvents BTNLength As Krypton.Toolkit.KryptonButton
     Friend WithEvents BTNGetUpperBound As Krypton.Toolkit.KryptonButton
     Friend WithEvents CNamaSiswa As DataGridViewTextBoxColumn
     Friend WithEvents CNilai As DataGridViewTextBoxColumn
@@ -1480,4 +1613,13 @@ Partial Class First
     Friend WithEvents BTNGetAVG As Krypton.Toolkit.KryptonButton
     Friend WithEvents BTNGetMax As Krypton.Toolkit.KryptonButton
     Friend WithEvents BTNRandom As Krypton.Toolkit.KryptonButton
+    Friend WithEvents KryptonBorderEdge1 As Krypton.Toolkit.KryptonBorderEdge
+    Friend WithEvents LBFunctions As Krypton.Toolkit.KryptonListBox
+    Friend WithEvents KryptonBorderEdge6 As Krypton.Toolkit.KryptonBorderEdge
+    Friend WithEvents BTNByValByRef As Krypton.Toolkit.KryptonButton
+    Friend WithEvents BTNSwap As Krypton.Toolkit.KryptonButton
+    Friend WithEvents KryptonBorderEdge7 As Krypton.Toolkit.KryptonBorderEdge
+    Friend WithEvents KryptonButton2 As Krypton.Toolkit.KryptonButton
+    Friend WithEvents KryptonButton1 As Krypton.Toolkit.KryptonButton
+    Friend WithEvents ListBox1 As ListBox
 End Class

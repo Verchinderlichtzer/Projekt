@@ -1,6 +1,12 @@
 ﻿Public Class First
+    Private Sub First_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        For Each x In Arrayx
+            LBFunctions.Items.Add(x)
+        Next
+    End Sub
 
 #Region "1. Read / Write Txt File"
+
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         TNotepad.Text = ""
     End Sub
@@ -58,9 +64,11 @@
     Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
         TNotepad.SelectedText = Clipboard.GetText
     End Sub
+
 #End Region
 
 #Region "2. Array, Collection"
+
     Dim Arrayz(7) As String
 
     Private Sub BTNTampilArray_Click(sender As Object, e As EventArgs) Handles BTNTampilArray.Click
@@ -75,12 +83,15 @@
 
 
     ' we define two arrays one to store names, another to store marks
-    Dim Names(9) As String
-    Dim Marks(9) As Integer
+    Dim Names() As String
+    Dim Marks() As Integer
     ' we define a variable to store how many element of the array we 
     ' used
     Dim StCount As Integer = 0
+
     Private Sub BTNInputSiswa_Click(sender As Object, e As EventArgs) Handles BTNInputSiswa.Click
+        ReDim Preserve Names(StCount)
+        ReDim Preserve Marks(StCount)
         ' read the name and mark and put them in the next empty slot
         Names(StCount) = InputBox("Masukkan Nama Siswa")
         Marks(StCount) = InputBox("Masukkan Nilai")
@@ -141,6 +152,10 @@
         MsgBox(Names.GetUpperBound(0))
     End Sub
 
+    Private Sub BTNLength_Click(sender As Object, e As EventArgs) Handles BTNLength.Click
+        MsgBox(Names.Length)
+    End Sub
+
     'Collection
     Dim MyCollection As New Collection
 
@@ -154,7 +169,7 @@
         Dim Name As String
         Name = InputBox("enter a name")
         ' add the name into the list
-        MyCollection.Add(Name)
+        If Name IsNot Nothing Then MyCollection.Add(Name)
     End Sub
 
     Private Sub BTNGetNumber_Click(sender As Object, e As EventArgs) Handles BTNGetNumber.Click
@@ -165,10 +180,10 @@
         ' clear old content
         LBCollection.Items.Clear()
         ' insert the items into the list box
-        Dim I As Integer
-        For I = 1 To MyCollection.Count
-            LBCollection.Items.Add(MyCollection(I))
+        For Each x In MyCollection
+            LBCollection.Items.Add(x)
         Next
+
     End Sub
 
     Private Sub BTNRemove_Click(sender As Object, e As EventArgs) Handles BTNRemove.Click
@@ -190,6 +205,7 @@
 #End Region
 
 #Region "3. Random"
+
     Dim AngkaRahasia As Integer
     Dim Percobaan As Integer
     Private Sub BTNStart_Click(sender As Object, e As EventArgs) Handles BTNMulai.Click
@@ -223,13 +239,15 @@
     Shared Acak As New Random()
     Private Sub BTNRandom_Click(sender As Object, e As EventArgs) Handles BTNRandom.Click
         Dim i As Integer
-        For i = 0 To 20
-            MsgBox(Convert.ToString(Acak.Next(10, 21))) 'Muncul angka 10 sampai 20
+        For i = 1 To 10
+            MsgBox(Convert.ToString(Acak.Next(10, 21)))
         Next
     End Sub
+
 #End Region
 
 #Region "4. Bilangan Prima"
+
     Private Sub BTNBilanganPrima_Click(sender As Object, e As EventArgs) Handles BTNBilanganPrima.Click
         Dim MyNumber As Integer
         Dim RemainderIsZeroFlag As Boolean
@@ -255,6 +273,7 @@
             MsgBox("The number is prime")
         End If
     End Sub
+
 #End Region
 
 #Region "5. Functions"
@@ -269,13 +288,11 @@
     End Function
 
     Private Sub BTNFactorial_Click(sender As Object, e As EventArgs) Handles BTNFactorial.Click
-        Dim sum = 4
         MsgBox(Factorial(8))
-        MsgBox($"The sum of the values is {sum:N0}")
     End Sub
 
     ' the max value in an array
-    Function GetMax(ByVal A() As Integer) As Integer
+    Function GetMax(A() As Integer) As Integer
         Dim I As Integer
         Dim Max As Integer
         Max = A(0) ' assume the max value is the 
@@ -290,7 +307,7 @@
         Return Max ' return the result
     End Function
     ' the avg value of an array
-    Function GetAVG(ByVal A() As Integer) As Integer
+    Function GetAVG(A() As Integer) As Integer
         Dim I As Integer
         Dim sum As Integer
         sum = 0 ' assume the sum value is 0
@@ -318,7 +335,7 @@
         Return A
     End Function
 
-    Dim Arrayx() As Integer = {44, 33, 22, 11, 99, 88, 77, 66, 55}
+    Dim Arrayx() As Integer = {44, 33, 22, 717, 95, 88, 77, 66, 55}
 
     Private Sub BTNGetMax_Click(sender As Object, e As EventArgs) Handles BTNGetMax.Click
         MsgBox(GetMax(Arrayx))
@@ -332,5 +349,86 @@
         ReadArray()
     End Sub
 
+    Function TestByVal(N As Integer) As Integer
+        N = 0
+        Return N
+    End Function
+
+    Function TestByRef(ByRef N As Integer) As Integer
+        N = 0
+        Return N
+    End Function
+
+    Private Sub BTNByValByRef_Click(sender As Object, e As EventArgs) Handles BTNByValByRef.Click
+        Dim K1 As Integer = 100
+        TestByVal(K1)
+        MsgBox(K1)
+        Dim K2 As Integer = 100
+        TestByRef(K2)
+        MsgBox(K2)
+    End Sub
+
+    Function Swap(ByRef V1 As Integer, ByRef V2 As Integer)
+        Dim Tmp As Integer
+        Tmp = V1
+        V1 = V2
+        V2 = Tmp
+        'ByRef - ByRef = N2 - N1 (Dibalik)
+        '- = N1 - N2 (Normal)
+        '- ByRef = N1 - N1 (Inputan pertama semua)
+        Return Nothing
+    End Function
+
+    Private Sub BTNSwap_Click(sender As Object, e As EventArgs) Handles BTNSwap.Click
+        Dim N1 As Integer
+        Dim N2 As Integer
+        N1 = InputBox("Enter N1")
+        N2 = InputBox("Enter N2")
+        Swap(N1, N2)
+        MsgBox("N1:" & N1)
+        MsgBox("N2:" & N2)
+    End Sub
+
+    Dim A() As Integer
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles KryptonButton1.Click
+        Dim Count As Integer
+        Count = InputBox("enter the number of values:")
+        ReDim A(0 To Count - 1)
+        Dim I As Integer
+        For I = 0 To Count - 1
+            A(I) = Integer.Parse(InputBox("Enter the value " & I))
+        Next
+        ViewArray(A, ListBox1)
+    End Sub
+
+    Public Sub ViewArray(Ar() As Integer, L As ListBox)
+        L.Items.Clear()
+        Dim I As Integer
+        For I = 0 To Ar.Length - 1
+            L.Items.Add(Ar(I))
+        Next
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles KryptonButton2.Click
+        ' sort
+        Dim I As Integer
+        Dim J As Integer
+        Dim Flag As Boolean
+        Do
+            Flag = False
+            For I = 0 To A.Length - 2
+                If A(I) > A(I + 1) Then
+                    Flag = True
+                    J = A(I)
+                    A(I) = A(I + 1)
+                    A(I + 1) = J
+                End If
+            Next
+        Loop Until Flag = False
+        ViewArray(A, ListBox1)
+
+    End Sub
+
 #End Region
+
 End Class
