@@ -57,7 +57,13 @@
     End Sub
 
     Private Sub KryptonButton1_Click(sender As Object, e As EventArgs) Handles KryptonButton1.Click
-
+        Dim Koleksi As New Collection
+        Koleksi.Add(Button1)
+        Koleksi.Add(Button2)
+        Koleksi.Add(DataGridView1)
+        For Each x In Koleksi
+            MsgBox(x.Width)
+        Next
     End Sub
     Dim Waktu As Date
     Dim ff As Integer

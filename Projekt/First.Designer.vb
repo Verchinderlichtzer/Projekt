@@ -86,6 +86,7 @@ Partial Class First
         Me.KryptonBorderEdge4 = New Krypton.Toolkit.KryptonBorderEdge()
         Me.KryptonLabel3 = New Krypton.Toolkit.KryptonLabel()
         Me.KryptonGroup4 = New Krypton.Toolkit.KryptonGroup()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.KryptonBorderEdge7 = New Krypton.Toolkit.KryptonBorderEdge()
         Me.KryptonBorderEdge6 = New Krypton.Toolkit.KryptonBorderEdge()
         Me.KryptonBorderEdge1 = New Krypton.Toolkit.KryptonBorderEdge()
@@ -100,7 +101,7 @@ Partial Class First
         Me.BTNSwap = New Krypton.Toolkit.KryptonButton()
         Me.BTNGetMax = New Krypton.Toolkit.KryptonButton()
         Me.BTNFactorial = New Krypton.Toolkit.KryptonButton()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         CType(Me.KryptonGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KryptonGroup1.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -253,33 +254,33 @@ Partial Class First
         'FontToolStripMenuItem
         '
         Me.FontToolStripMenuItem.Name = "FontToolStripMenuItem"
-        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.FontToolStripMenuItem.Text = "Font"
         '
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(141, 6)
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(177, 6)
         '
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
         Me.CopyToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'CutToolStripMenuItem
         '
         Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
         Me.CutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CutToolStripMenuItem.Text = "Cut"
         '
         'PasteToolStripMenuItem
         '
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
         Me.PasteToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'TambahkanTandaANDShift5UntukMemberiGarisBawahPadaTulisanTekanAltHurufYgDigarisbawahUntukMemilihToolStripMenuItem
@@ -834,6 +835,7 @@ Partial Class First
         Me.KryptonButton6.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
         Me.KryptonButton6.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.KryptonButton6.TabIndex = 136
+        Me.ToolTip1.SetToolTip(Me.KryptonButton6, "Haha..")
         Me.KryptonButton6.Values.Text = ""
         '
         'BTNLength
@@ -1199,6 +1201,14 @@ Partial Class First
         Me.KryptonGroup4.StateCommon.Border.Width = 3
         Me.KryptonGroup4.TabIndex = 107
         '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(639, 67)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(160, 199)
+        Me.ListBox1.TabIndex = 151
+        '
         'KryptonBorderEdge7
         '
         Me.KryptonBorderEdge7.Location = New System.Drawing.Point(591, 30)
@@ -1498,14 +1508,6 @@ Partial Class First
         Me.BTNFactorial.TabIndex = 145
         Me.BTNFactorial.Values.Text = "Factorial"
         '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(639, 67)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(160, 199)
-        Me.ListBox1.TabIndex = 151
-        '
         'First
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -1622,4 +1624,5 @@ Partial Class First
     Friend WithEvents KryptonButton2 As Krypton.Toolkit.KryptonButton
     Friend WithEvents KryptonButton1 As Krypton.Toolkit.KryptonButton
     Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

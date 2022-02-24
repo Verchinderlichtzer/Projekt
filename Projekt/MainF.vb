@@ -58,4 +58,8 @@ Public Class MainF
             Saklar.Enabled = y
         Next
     End Sub
+
+    Private Sub BTNHapus_Click(sender As Object, e As EventArgs) Handles BTNHapus.Click
+        MsgBox(Size.Width & " x " & Size.Height)
+    End Sub
 End Class

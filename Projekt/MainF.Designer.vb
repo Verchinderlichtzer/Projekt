@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainF
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,14 @@ Partial Class MainF
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainF))
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PaletPrimer = New Krypton.Toolkit.KryptonPalette(Me.components)
         Me.PaletSekunder = New Krypton.Toolkit.KryptonPalette(Me.components)
         Me.TCariBarang = New Krypton.Toolkit.KryptonTextBox()
@@ -53,6 +53,7 @@ Partial Class MainF
         Me.BTN2 = New Krypton.Toolkit.KryptonCheckButton()
         Me.BTN1 = New Krypton.Toolkit.KryptonCheckButton()
         Me.PanelForm = New System.Windows.Forms.Panel()
+        Me.KryptonListBox1 = New Krypton.Toolkit.KryptonListBox()
         Me.PanelPrimer = New Krypton.Toolkit.KryptonGroup()
         Me.PrimerComboBox2 = New Krypton.Toolkit.KryptonComboBox()
         Me.PrimerComboBox1 = New Krypton.Toolkit.KryptonComboBox()
@@ -93,7 +94,6 @@ Partial Class MainF
         Me.PemisahV = New Krypton.Toolkit.KryptonBorderEdge()
         Me.BTNHapus = New Krypton.Toolkit.KryptonButton()
         Me.BTNClear = New Krypton.Toolkit.KryptonButton()
-        Me.KryptonListBox1 = New Krypton.Toolkit.KryptonListBox()
         CType(Me.Sidebar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
         Me.PanelForm.SuspendLayout()
@@ -237,7 +237,7 @@ Partial Class MainF
         Me.Sidebar.Location = New System.Drawing.Point(0, 0)
         Me.Sidebar.Name = "Sidebar"
         Me.Sidebar.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
-        Me.Sidebar.Size = New System.Drawing.Size(150, 650)
+        Me.Sidebar.Size = New System.Drawing.Size(150, 637)
         Me.Sidebar.StateCommon.Color1 = System.Drawing.Color.White
         Me.Sidebar.StateCommon.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
         Me.Sidebar.TabIndex = 6
@@ -1356,8 +1356,38 @@ Partial Class MainF
         Me.PanelForm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelForm.Location = New System.Drawing.Point(150, 0)
         Me.PanelForm.Name = "PanelForm"
-        Me.PanelForm.Size = New System.Drawing.Size(1100, 650)
+        Me.PanelForm.Size = New System.Drawing.Size(1100, 637)
         Me.PanelForm.TabIndex = 132
+        '
+        'KryptonListBox1
+        '
+        Me.KryptonListBox1.Items.AddRange(New Object() {"Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggoe"})
+        Me.KryptonListBox1.Location = New System.Drawing.Point(516, 447)
+        Me.KryptonListBox1.Name = "KryptonListBox1"
+        Me.KryptonListBox1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
+        Me.KryptonListBox1.Size = New System.Drawing.Size(141, 200)
+        Me.KryptonListBox1.StateCheckedNormal.Item.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.KryptonListBox1.StateCheckedNormal.Item.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonListBox1.StateCheckedNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.KryptonListBox1.StateCheckedNormal.Item.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.KryptonListBox1.StateCheckedPressed.Item.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.KryptonListBox1.StateCheckedPressed.Item.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonListBox1.StateCheckedPressed.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.KryptonListBox1.StateCheckedPressed.Item.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.KryptonListBox1.StateCheckedTracking.Item.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.KryptonListBox1.StateCheckedTracking.Item.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonListBox1.StateCheckedTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.KryptonListBox1.StateCheckedTracking.Item.Content.ShortText.Color1 = System.Drawing.Color.White
+        Me.KryptonListBox1.StateCheckedTracking.Item.Content.ShortText.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonListBox1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.KryptonListBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.KryptonListBox1.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.KryptonListBox1.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.KryptonListBox1.StateCommon.Item.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.KryptonListBox1.StateTracking.Item.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.KryptonListBox1.StateTracking.Item.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
+        Me.KryptonListBox1.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
+        Me.KryptonListBox1.TabIndex = 131
         '
         'PanelPrimer
         '
@@ -1398,7 +1428,7 @@ Partial Class MainF
         Me.PrimerComboBox2.AlwaysActive = False
         Me.PrimerComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable
         Me.PrimerComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.PrimerComboBox2.DropDownWidth = 167
+        Me.PrimerComboBox2.DropDownWidth = 119
         Me.PrimerComboBox2.Enabled = False
         Me.PrimerComboBox2.InputControlStyle = Krypton.Toolkit.InputControlStyle.Custom3
         Me.PrimerComboBox2.IntegralHeight = False
@@ -1407,7 +1437,7 @@ Partial Class MainF
         Me.PrimerComboBox2.Name = "PrimerComboBox2"
         Me.PrimerComboBox2.Palette = Me.PaletPrimer
         Me.PrimerComboBox2.PaletteMode = Krypton.Toolkit.PaletteMode.Custom
-        Me.PrimerComboBox2.Size = New System.Drawing.Size(189, 26)
+        Me.PrimerComboBox2.Size = New System.Drawing.Size(119, 26)
         Me.PrimerComboBox2.StateActive.ComboBox.Content.Font = New System.Drawing.Font("Trebuchet MS", 13.75!)
         Me.PrimerComboBox2.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.PrimerComboBox2.StateCommon.ComboBox.Content.Font = New System.Drawing.Font("Trebuchet MS", 13.75!)
@@ -1425,7 +1455,7 @@ Partial Class MainF
         Me.PrimerComboBox1.AlwaysActive = False
         Me.PrimerComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable
         Me.PrimerComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.PrimerComboBox1.DropDownWidth = 167
+        Me.PrimerComboBox1.DropDownWidth = 119
         Me.PrimerComboBox1.InputControlStyle = Krypton.Toolkit.InputControlStyle.Custom3
         Me.PrimerComboBox1.IntegralHeight = False
         Me.PrimerComboBox1.Items.AddRange(New Object() {"Jan", "Feb", "Mar", "Apr"})
@@ -1433,7 +1463,7 @@ Partial Class MainF
         Me.PrimerComboBox1.Name = "PrimerComboBox1"
         Me.PrimerComboBox1.Palette = Me.PaletPrimer
         Me.PrimerComboBox1.PaletteMode = Krypton.Toolkit.PaletteMode.Custom
-        Me.PrimerComboBox1.Size = New System.Drawing.Size(189, 26)
+        Me.PrimerComboBox1.Size = New System.Drawing.Size(119, 26)
         Me.PrimerComboBox1.StateActive.ComboBox.Content.Font = New System.Drawing.Font("Trebuchet MS", 13.75!)
         Me.PrimerComboBox1.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.PrimerComboBox1.StateCommon.ComboBox.Content.Font = New System.Drawing.Font("Trebuchet MS", 13.75!)
@@ -1465,8 +1495,8 @@ Partial Class MainF
         Me.PrimerDGV2.AllowUserToDeleteRows = False
         Me.PrimerDGV2.AllowUserToResizeColumns = False
         Me.PrimerDGV2.AllowUserToResizeRows = False
-        DataGridViewCellStyle33.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.PrimerDGV2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.PrimerDGV2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.PrimerDGV2.ColumnHeadersHeight = 27
         Me.PrimerDGV2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.PrimerDGV2.Cursor = System.Windows.Forms.Cursors.Default
@@ -1523,8 +1553,8 @@ Partial Class MainF
         Me.PrimerDGV1.AllowUserToDeleteRows = False
         Me.PrimerDGV1.AllowUserToResizeColumns = False
         Me.PrimerDGV1.AllowUserToResizeRows = False
-        DataGridViewCellStyle34.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.PrimerDGV1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle34
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.PrimerDGV1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.PrimerDGV1.ColumnHeadersHeight = 27
         Me.PrimerDGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.PrimerDGV1.Cursor = System.Windows.Forms.Cursors.Default
@@ -1812,8 +1842,8 @@ Partial Class MainF
         Me.SekunderDGV2.AllowUserToDeleteRows = False
         Me.SekunderDGV2.AllowUserToResizeColumns = False
         Me.SekunderDGV2.AllowUserToResizeRows = False
-        DataGridViewCellStyle35.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.SekunderDGV2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.SekunderDGV2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.SekunderDGV2.ColumnHeadersHeight = 27
         Me.SekunderDGV2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.SekunderDGV2.Cursor = System.Windows.Forms.Cursors.Default
@@ -1853,7 +1883,7 @@ Partial Class MainF
         Me.SekunderComboBox2.AlwaysActive = False
         Me.SekunderComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable
         Me.SekunderComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.SekunderComboBox2.DropDownWidth = 167
+        Me.SekunderComboBox2.DropDownWidth = 119
         Me.SekunderComboBox2.Enabled = False
         Me.SekunderComboBox2.InputControlStyle = Krypton.Toolkit.InputControlStyle.Custom3
         Me.SekunderComboBox2.IntegralHeight = False
@@ -1862,7 +1892,7 @@ Partial Class MainF
         Me.SekunderComboBox2.Name = "SekunderComboBox2"
         Me.SekunderComboBox2.Palette = Me.PaletSekunder
         Me.SekunderComboBox2.PaletteMode = Krypton.Toolkit.PaletteMode.Custom
-        Me.SekunderComboBox2.Size = New System.Drawing.Size(189, 26)
+        Me.SekunderComboBox2.Size = New System.Drawing.Size(119, 26)
         Me.SekunderComboBox2.StateActive.ComboBox.Content.Font = New System.Drawing.Font("Trebuchet MS", 13.75!)
         Me.SekunderComboBox2.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.SekunderComboBox2.StateCommon.ComboBox.Content.Font = New System.Drawing.Font("Trebuchet MS", 13.75!)
@@ -1881,8 +1911,8 @@ Partial Class MainF
         Me.SekunderDGV1.AllowUserToDeleteRows = False
         Me.SekunderDGV1.AllowUserToResizeColumns = False
         Me.SekunderDGV1.AllowUserToResizeRows = False
-        DataGridViewCellStyle36.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.SekunderDGV1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle36
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.SekunderDGV1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.SekunderDGV1.ColumnHeadersHeight = 27
         Me.SekunderDGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.SekunderDGV1.Cursor = System.Windows.Forms.Cursors.Default
@@ -1921,7 +1951,7 @@ Partial Class MainF
         Me.SekunderComboBox1.AlwaysActive = False
         Me.SekunderComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable
         Me.SekunderComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.SekunderComboBox1.DropDownWidth = 167
+        Me.SekunderComboBox1.DropDownWidth = 119
         Me.SekunderComboBox1.InputControlStyle = Krypton.Toolkit.InputControlStyle.Custom3
         Me.SekunderComboBox1.IntegralHeight = False
         Me.SekunderComboBox1.Items.AddRange(New Object() {"Jan", "Feb", "Mar", "Apr"})
@@ -1929,7 +1959,7 @@ Partial Class MainF
         Me.SekunderComboBox1.Name = "SekunderComboBox1"
         Me.SekunderComboBox1.Palette = Me.PaletSekunder
         Me.SekunderComboBox1.PaletteMode = Krypton.Toolkit.PaletteMode.Custom
-        Me.SekunderComboBox1.Size = New System.Drawing.Size(189, 26)
+        Me.SekunderComboBox1.Size = New System.Drawing.Size(119, 26)
         Me.SekunderComboBox1.StateActive.ComboBox.Content.Font = New System.Drawing.Font("Trebuchet MS", 13.75!)
         Me.SekunderComboBox1.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.SekunderComboBox1.StateCommon.ComboBox.Content.Font = New System.Drawing.Font("Trebuchet MS", 13.75!)
@@ -2346,47 +2376,17 @@ Partial Class MainF
         Me.BTNClear.TabIndex = 109
         Me.BTNClear.Values.Text = ""
         '
-        'KryptonListBox1
-        '
-        Me.KryptonListBox1.Items.AddRange(New Object() {"Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggoe"})
-        Me.KryptonListBox1.Location = New System.Drawing.Point(516, 447)
-        Me.KryptonListBox1.Name = "KryptonListBox1"
-        Me.KryptonListBox1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
-        Me.KryptonListBox1.Size = New System.Drawing.Size(141, 200)
-        Me.KryptonListBox1.StateCheckedNormal.Item.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.KryptonListBox1.StateCheckedNormal.Item.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.KryptonListBox1.StateCheckedNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.KryptonListBox1.StateCheckedNormal.Item.Content.ShortText.Color1 = System.Drawing.Color.White
-        Me.KryptonListBox1.StateCheckedPressed.Item.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.KryptonListBox1.StateCheckedPressed.Item.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.KryptonListBox1.StateCheckedPressed.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.KryptonListBox1.StateCheckedPressed.Item.Content.ShortText.Color1 = System.Drawing.Color.White
-        Me.KryptonListBox1.StateCheckedTracking.Item.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.KryptonListBox1.StateCheckedTracking.Item.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.KryptonListBox1.StateCheckedTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.KryptonListBox1.StateCheckedTracking.Item.Content.ShortText.Color1 = System.Drawing.Color.White
-        Me.KryptonListBox1.StateCheckedTracking.Item.Content.ShortText.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.KryptonListBox1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(238, Byte), Integer))
-        Me.KryptonListBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.KryptonListBox1.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.KryptonListBox1.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.KryptonListBox1.StateCommon.Item.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.KryptonListBox1.StateTracking.Item.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(205, Byte), Integer))
-        Me.KryptonListBox1.StateTracking.Item.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.KryptonListBox1.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.KryptonListBox1.TabIndex = 131
-        '
         'MainF
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1250, 650)
+        Me.ClientSize = New System.Drawing.Size(1250, 637)
         Me.Controls.Add(Me.PanelForm)
         Me.Controls.Add(Me.Sidebar)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(1266, 689)
-        Me.MinimumSize = New System.Drawing.Size(1266, 689)
+        Me.MaximumSize = New System.Drawing.Size(1266, 676)
+        Me.MinimumSize = New System.Drawing.Size(1266, 676)
         Me.Name = "MainF"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Projekt"
