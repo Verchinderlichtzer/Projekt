@@ -83,6 +83,19 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedMsg.Designer.vb">
+      <DependentUpon>AdvancedMsg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedMsg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="BasicMsg.Designer.vb">
+      <DependentUpon>BasicMsg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BasicMsg.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="First.Designer.vb">
       <DependentUpon>First.vb</DependentUpon>
     </Compile>
@@ -101,6 +114,7 @@
     <Compile Include="MainF.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modul.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -123,8 +137,20 @@
     <Compile Include="Second.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Third.Designer.vb">
+      <DependentUpon>Third.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Third.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdvancedMsg.resx">
+      <DependentUpon>AdvancedMsg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicMsg.resx">
+      <DependentUpon>BasicMsg.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="First.resx">
       <DependentUpon>First.vb</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Second.resx">
       <DependentUpon>Second.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Third.resx">
+      <DependentUpon>Third.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

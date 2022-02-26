@@ -32,11 +32,6 @@ Partial Class MainF
         Me.PaletSekunder = New Krypton.Toolkit.KryptonPalette(Me.components)
         Me.TCariBarang = New Krypton.Toolkit.KryptonTextBox()
         Me.Sidebar = New Krypton.Toolkit.KryptonPanel()
-        Me.BTN20 = New Krypton.Toolkit.KryptonCheckButton()
-        Me.BTN19 = New Krypton.Toolkit.KryptonCheckButton()
-        Me.BTN18 = New Krypton.Toolkit.KryptonCheckButton()
-        Me.BTN17 = New Krypton.Toolkit.KryptonCheckButton()
-        Me.BTN16 = New Krypton.Toolkit.KryptonCheckButton()
         Me.BTN15 = New Krypton.Toolkit.KryptonCheckButton()
         Me.BTN14 = New Krypton.Toolkit.KryptonCheckButton()
         Me.BTN13 = New Krypton.Toolkit.KryptonCheckButton()
@@ -53,6 +48,7 @@ Partial Class MainF
         Me.BTN2 = New Krypton.Toolkit.KryptonCheckButton()
         Me.BTN1 = New Krypton.Toolkit.KryptonCheckButton()
         Me.PanelForm = New System.Windows.Forms.Panel()
+        Me.ThemeSwitcher = New Krypton.Toolkit.KryptonComboBox()
         Me.KryptonListBox1 = New Krypton.Toolkit.KryptonListBox()
         Me.PanelPrimer = New Krypton.Toolkit.KryptonGroup()
         Me.PrimerComboBox2 = New Krypton.Toolkit.KryptonComboBox()
@@ -97,6 +93,7 @@ Partial Class MainF
         CType(Me.Sidebar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
         Me.PanelForm.SuspendLayout()
+        CType(Me.ThemeSwitcher, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelPrimer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelPrimer.Panel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelPrimer.Panel.SuspendLayout()
@@ -213,11 +210,6 @@ Partial Class MainF
         '
         'Sidebar
         '
-        Me.Sidebar.Controls.Add(Me.BTN20)
-        Me.Sidebar.Controls.Add(Me.BTN19)
-        Me.Sidebar.Controls.Add(Me.BTN18)
-        Me.Sidebar.Controls.Add(Me.BTN17)
-        Me.Sidebar.Controls.Add(Me.BTN16)
         Me.Sidebar.Controls.Add(Me.BTN15)
         Me.Sidebar.Controls.Add(Me.BTN14)
         Me.Sidebar.Controls.Add(Me.BTN13)
@@ -237,285 +229,10 @@ Partial Class MainF
         Me.Sidebar.Location = New System.Drawing.Point(0, 0)
         Me.Sidebar.Name = "Sidebar"
         Me.Sidebar.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
-        Me.Sidebar.Size = New System.Drawing.Size(150, 637)
+        Me.Sidebar.Size = New System.Drawing.Size(150, 676)
         Me.Sidebar.StateCommon.Color1 = System.Drawing.Color.White
         Me.Sidebar.StateCommon.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
         Me.Sidebar.TabIndex = 6
-        '
-        'BTN20
-        '
-        Me.BTN20.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BTN20.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BTN20.Location = New System.Drawing.Point(0, 608)
-        Me.BTN20.Name = "BTN20"
-        Me.BTN20.OverrideDefault.Back.Color1 = System.Drawing.Color.White
-        Me.BTN20.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN20.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN20.OverrideFocus.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.BTN20.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
-        Me.BTN20.Size = New System.Drawing.Size(150, 32)
-        Me.BTN20.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN20.StateCheckedNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN20.StateCheckedNormal.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN20.StateCheckedNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN20.StateCheckedNormal.Border.Rounding = 0!
-        Me.BTN20.StateCheckedNormal.Border.Width = 2
-        Me.BTN20.StateCheckedNormal.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN20.StateCheckedPressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN20.StateCheckedPressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN20.StateCheckedPressed.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN20.StateCheckedPressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN20.StateCheckedPressed.Border.Rounding = 0!
-        Me.BTN20.StateCheckedPressed.Border.Width = 2
-        Me.BTN20.StateCheckedPressed.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN20.StateCheckedTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN20.StateCheckedTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN20.StateCheckedTracking.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN20.StateCheckedTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN20.StateCheckedTracking.Border.Rounding = 0!
-        Me.BTN20.StateCheckedTracking.Border.Width = 2
-        Me.BTN20.StateCheckedTracking.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN20.StateCommon.Back.Color1 = System.Drawing.Color.White
-        Me.BTN20.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN20.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN20.StateCommon.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.BTN20.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near
-        Me.BTN20.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BTN20.StateCommon.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN20.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
-        Me.BTN20.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
-        Me.BTN20.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN20.StatePressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN20.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN20.StatePressed.Border.Rounding = 0!
-        Me.BTN20.StatePressed.Border.Width = 2
-        Me.BTN20.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black
-        Me.BTN20.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(253, Byte), Integer))
-        Me.BTN20.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN20.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN20.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.BTN20.TabIndex = 47
-        Me.BTN20.Values.Text = "Twentieth"
-        '
-        'BTN19
-        '
-        Me.BTN19.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BTN19.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BTN19.Location = New System.Drawing.Point(0, 576)
-        Me.BTN19.Name = "BTN19"
-        Me.BTN19.OverrideDefault.Back.Color1 = System.Drawing.Color.White
-        Me.BTN19.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN19.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN19.OverrideFocus.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.BTN19.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
-        Me.BTN19.Size = New System.Drawing.Size(150, 32)
-        Me.BTN19.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN19.StateCheckedNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN19.StateCheckedNormal.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN19.StateCheckedNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN19.StateCheckedNormal.Border.Rounding = 0!
-        Me.BTN19.StateCheckedNormal.Border.Width = 2
-        Me.BTN19.StateCheckedNormal.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN19.StateCheckedPressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN19.StateCheckedPressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN19.StateCheckedPressed.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN19.StateCheckedPressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN19.StateCheckedPressed.Border.Rounding = 0!
-        Me.BTN19.StateCheckedPressed.Border.Width = 2
-        Me.BTN19.StateCheckedPressed.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN19.StateCheckedTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN19.StateCheckedTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN19.StateCheckedTracking.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN19.StateCheckedTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN19.StateCheckedTracking.Border.Rounding = 0!
-        Me.BTN19.StateCheckedTracking.Border.Width = 2
-        Me.BTN19.StateCheckedTracking.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN19.StateCommon.Back.Color1 = System.Drawing.Color.White
-        Me.BTN19.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN19.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN19.StateCommon.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.BTN19.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near
-        Me.BTN19.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BTN19.StateCommon.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN19.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
-        Me.BTN19.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
-        Me.BTN19.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN19.StatePressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN19.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN19.StatePressed.Border.Rounding = 0!
-        Me.BTN19.StatePressed.Border.Width = 2
-        Me.BTN19.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black
-        Me.BTN19.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(253, Byte), Integer))
-        Me.BTN19.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN19.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN19.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.BTN19.TabIndex = 46
-        Me.BTN19.Values.Text = "Nineteenth"
-        '
-        'BTN18
-        '
-        Me.BTN18.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BTN18.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BTN18.Location = New System.Drawing.Point(0, 544)
-        Me.BTN18.Name = "BTN18"
-        Me.BTN18.OverrideDefault.Back.Color1 = System.Drawing.Color.White
-        Me.BTN18.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN18.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN18.OverrideFocus.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.BTN18.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
-        Me.BTN18.Size = New System.Drawing.Size(150, 32)
-        Me.BTN18.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN18.StateCheckedNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN18.StateCheckedNormal.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN18.StateCheckedNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN18.StateCheckedNormal.Border.Rounding = 0!
-        Me.BTN18.StateCheckedNormal.Border.Width = 2
-        Me.BTN18.StateCheckedNormal.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN18.StateCheckedPressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN18.StateCheckedPressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN18.StateCheckedPressed.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN18.StateCheckedPressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN18.StateCheckedPressed.Border.Rounding = 0!
-        Me.BTN18.StateCheckedPressed.Border.Width = 2
-        Me.BTN18.StateCheckedPressed.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN18.StateCheckedTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN18.StateCheckedTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN18.StateCheckedTracking.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN18.StateCheckedTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN18.StateCheckedTracking.Border.Rounding = 0!
-        Me.BTN18.StateCheckedTracking.Border.Width = 2
-        Me.BTN18.StateCheckedTracking.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN18.StateCommon.Back.Color1 = System.Drawing.Color.White
-        Me.BTN18.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN18.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN18.StateCommon.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.BTN18.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near
-        Me.BTN18.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BTN18.StateCommon.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN18.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
-        Me.BTN18.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
-        Me.BTN18.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN18.StatePressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN18.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN18.StatePressed.Border.Rounding = 0!
-        Me.BTN18.StatePressed.Border.Width = 2
-        Me.BTN18.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black
-        Me.BTN18.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(253, Byte), Integer))
-        Me.BTN18.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN18.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN18.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.BTN18.TabIndex = 45
-        Me.BTN18.Values.Text = "Eighteenth"
-        '
-        'BTN17
-        '
-        Me.BTN17.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BTN17.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BTN17.Location = New System.Drawing.Point(0, 512)
-        Me.BTN17.Name = "BTN17"
-        Me.BTN17.OverrideDefault.Back.Color1 = System.Drawing.Color.White
-        Me.BTN17.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN17.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN17.OverrideFocus.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.BTN17.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
-        Me.BTN17.Size = New System.Drawing.Size(150, 32)
-        Me.BTN17.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN17.StateCheckedNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN17.StateCheckedNormal.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN17.StateCheckedNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN17.StateCheckedNormal.Border.Rounding = 0!
-        Me.BTN17.StateCheckedNormal.Border.Width = 2
-        Me.BTN17.StateCheckedNormal.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN17.StateCheckedPressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN17.StateCheckedPressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN17.StateCheckedPressed.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN17.StateCheckedPressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN17.StateCheckedPressed.Border.Rounding = 0!
-        Me.BTN17.StateCheckedPressed.Border.Width = 2
-        Me.BTN17.StateCheckedPressed.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN17.StateCheckedTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN17.StateCheckedTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN17.StateCheckedTracking.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN17.StateCheckedTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN17.StateCheckedTracking.Border.Rounding = 0!
-        Me.BTN17.StateCheckedTracking.Border.Width = 2
-        Me.BTN17.StateCheckedTracking.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN17.StateCommon.Back.Color1 = System.Drawing.Color.White
-        Me.BTN17.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN17.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN17.StateCommon.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.BTN17.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near
-        Me.BTN17.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BTN17.StateCommon.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN17.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
-        Me.BTN17.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
-        Me.BTN17.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN17.StatePressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN17.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN17.StatePressed.Border.Rounding = 0!
-        Me.BTN17.StatePressed.Border.Width = 2
-        Me.BTN17.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black
-        Me.BTN17.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(253, Byte), Integer))
-        Me.BTN17.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN17.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN17.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.BTN17.TabIndex = 44
-        Me.BTN17.Values.Text = "Seventeenth"
-        '
-        'BTN16
-        '
-        Me.BTN16.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BTN16.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BTN16.Location = New System.Drawing.Point(0, 480)
-        Me.BTN16.Name = "BTN16"
-        Me.BTN16.OverrideDefault.Back.Color1 = System.Drawing.Color.White
-        Me.BTN16.OverrideDefault.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN16.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN16.OverrideFocus.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.BTN16.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem
-        Me.BTN16.Size = New System.Drawing.Size(150, 32)
-        Me.BTN16.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN16.StateCheckedNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN16.StateCheckedNormal.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN16.StateCheckedNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN16.StateCheckedNormal.Border.Rounding = 0!
-        Me.BTN16.StateCheckedNormal.Border.Width = 2
-        Me.BTN16.StateCheckedNormal.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN16.StateCheckedPressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN16.StateCheckedPressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN16.StateCheckedPressed.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN16.StateCheckedPressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN16.StateCheckedPressed.Border.Rounding = 0!
-        Me.BTN16.StateCheckedPressed.Border.Width = 2
-        Me.BTN16.StateCheckedPressed.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN16.StateCheckedTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN16.StateCheckedTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN16.StateCheckedTracking.Border.Color1 = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.BTN16.StateCheckedTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Left
-        Me.BTN16.StateCheckedTracking.Border.Rounding = 0!
-        Me.BTN16.StateCheckedTracking.Border.Width = 2
-        Me.BTN16.StateCheckedTracking.Content.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.BTN16.StateCommon.Back.Color1 = System.Drawing.Color.White
-        Me.BTN16.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN16.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN16.StateCommon.Content.DrawFocus = Krypton.Toolkit.InheritBool.[False]
-        Me.BTN16.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near
-        Me.BTN16.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BTN16.StateCommon.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN16.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
-        Me.BTN16.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(160, Byte), Integer))
-        Me.BTN16.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.BTN16.StatePressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN16.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN16.StatePressed.Border.Rounding = 0!
-        Me.BTN16.StatePressed.Border.Width = 2
-        Me.BTN16.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black
-        Me.BTN16.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(253, Byte), Integer))
-        Me.BTN16.StateTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid
-        Me.BTN16.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.None
-        Me.BTN16.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.BTN16.TabIndex = 43
-        Me.BTN16.Values.Text = "Sixteenth"
         '
         'BTN15
         '
@@ -1344,6 +1061,7 @@ Partial Class MainF
         '
         'PanelForm
         '
+        Me.PanelForm.Controls.Add(Me.ThemeSwitcher)
         Me.PanelForm.Controls.Add(Me.KryptonListBox1)
         Me.PanelForm.Controls.Add(Me.PanelPrimer)
         Me.PanelForm.Controls.Add(Me.PemisahH)
@@ -1356,8 +1074,34 @@ Partial Class MainF
         Me.PanelForm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelForm.Location = New System.Drawing.Point(150, 0)
         Me.PanelForm.Name = "PanelForm"
-        Me.PanelForm.Size = New System.Drawing.Size(1100, 637)
+        Me.PanelForm.Size = New System.Drawing.Size(1116, 676)
         Me.PanelForm.TabIndex = 132
+        '
+        'ThemeSwitcher
+        '
+        Me.ThemeSwitcher.AlwaysActive = False
+        Me.ThemeSwitcher.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable
+        Me.ThemeSwitcher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ThemeSwitcher.DropDownWidth = 119
+        Me.ThemeSwitcher.InputControlStyle = Krypton.Toolkit.InputControlStyle.Custom3
+        Me.ThemeSwitcher.IntegralHeight = False
+        Me.ThemeSwitcher.Items.AddRange(New Object() {"Light - Blue", "Dark - Red"})
+        Me.ThemeSwitcher.Location = New System.Drawing.Point(255, 454)
+        Me.ThemeSwitcher.Name = "ThemeSwitcher"
+        Me.ThemeSwitcher.Palette = Me.PaletPrimer
+        Me.ThemeSwitcher.PaletteMode = Krypton.Toolkit.PaletteMode.Custom
+        Me.ThemeSwitcher.Size = New System.Drawing.Size(119, 26)
+        Me.ThemeSwitcher.StateActive.ComboBox.Content.Font = New System.Drawing.Font("Trebuchet MS", 13.75!)
+        Me.ThemeSwitcher.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ThemeSwitcher.StateCommon.ComboBox.Content.Font = New System.Drawing.Font("Trebuchet MS", 13.75!)
+        Me.ThemeSwitcher.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near
+        Me.ThemeSwitcher.StateCommon.DropBack.Color1 = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.ThemeSwitcher.StateCommon.Item.Back.Color1 = System.Drawing.Color.WhiteSmoke
+        Me.ThemeSwitcher.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ThemeSwitcher.StateCommon.Item.Content.ShortText.Font = New System.Drawing.Font("Trebuchet MS", 12.0!)
+        Me.ThemeSwitcher.StateTracking.Item.Back.Color1 = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(244, Byte), Integer))
+        Me.ThemeSwitcher.StateTracking.Item.Content.ShortText.Color1 = System.Drawing.Color.Black
+        Me.ThemeSwitcher.TabIndex = 137
         '
         'KryptonListBox1
         '
@@ -2380,9 +2124,10 @@ Partial Class MainF
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1250, 637)
+        Me.ClientSize = New System.Drawing.Size(1266, 676)
         Me.Controls.Add(Me.PanelForm)
         Me.Controls.Add(Me.Sidebar)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1266, 676)
@@ -2394,6 +2139,7 @@ Partial Class MainF
         Me.Sidebar.ResumeLayout(False)
         Me.PanelForm.ResumeLayout(False)
         Me.PanelForm.PerformLayout()
+        CType(Me.ThemeSwitcher, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelPrimer.Panel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelPrimer.Panel.ResumeLayout(False)
         Me.PanelPrimer.Panel.PerformLayout()
@@ -2419,11 +2165,6 @@ Partial Class MainF
     Friend WithEvents PaletSekunder As Krypton.Toolkit.KryptonPalette
     Friend WithEvents TCariBarang As Krypton.Toolkit.KryptonTextBox
     Friend WithEvents Sidebar As Krypton.Toolkit.KryptonPanel
-    Friend WithEvents BTN20 As Krypton.Toolkit.KryptonCheckButton
-    Friend WithEvents BTN19 As Krypton.Toolkit.KryptonCheckButton
-    Friend WithEvents BTN18 As Krypton.Toolkit.KryptonCheckButton
-    Friend WithEvents BTN17 As Krypton.Toolkit.KryptonCheckButton
-    Friend WithEvents BTN16 As Krypton.Toolkit.KryptonCheckButton
     Friend WithEvents BTN15 As Krypton.Toolkit.KryptonCheckButton
     Friend WithEvents BTN14 As Krypton.Toolkit.KryptonCheckButton
     Friend WithEvents BTN13 As Krypton.Toolkit.KryptonCheckButton
@@ -2481,4 +2222,5 @@ Partial Class MainF
     Friend WithEvents BTNHapus As Krypton.Toolkit.KryptonButton
     Friend WithEvents BTNClear As Krypton.Toolkit.KryptonButton
     Friend WithEvents KryptonListBox1 As Krypton.Toolkit.KryptonListBox
+    Friend WithEvents ThemeSwitcher As Krypton.Toolkit.KryptonComboBox
 End Class

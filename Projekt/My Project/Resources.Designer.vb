@@ -63,6 +63,36 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property berhasil() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("berhasil", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property gagal() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("gagal", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property konfirmasi() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("konfirmasi", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Login_Dark() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Login_Dark", resourceCulture)

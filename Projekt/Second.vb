@@ -1,4 +1,5 @@
-﻿Public Class Second
+﻿Imports System.Data.OleDb
+Public Class Second
     ' this is the structure to store person information
     Structure PersonInfo
         Dim Name As String
@@ -47,35 +48,140 @@
             Next
         Loop While Flg
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ReadInfo()
-        FillDGV(Info, DataGridView1)
-    End Sub
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Sort(Info)
-        FillDGV(Info, DataGridView1)
+    'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    '    ReadInfo()
+    '    FillDGV(Info, DataGridView1)
+    'End Sub
+    'Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    '    Sort(Info)
+    '    FillDGV(Info, DataGridView1)
+    'End Sub
+
+    '#Region "Databased"
+    '    Dim FetchData As Integer
+    '    Dim CurrentPage As Integer = 1
+
+    '    Sub Counter()
+    '        QR("SELECT COUNT(*) FROM TBLManusia")
+    '        TCounter.Text = CurrentPage & " / " & Math.Ceiling(DR(0) / 7)
+    '    End Sub
+
+    '    Private Sub Second_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    '        Column1.Items.Clear()
+
+    '        'For x = 1 To 40
+    '        '    'Column1.Items.Add(x)
+    '        '    KryptonTextBox1.AutoCompleteCustomSource.Add(x)
+    '        'Next
+    '        DA = New OleDbDataAdapter("SELECT * FROM TBLManusia", CONN)
+    '        DS = New DataSet
+    '        DA.Fill(DS, FetchData, 7, 0)
+    '        DGV.DataSource = DS.Tables(0)
+    '        DGV.Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
+    '        DGV.Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+    '        DGV.Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+    '        Counter()
+    '    End Sub
+
+    '    Private Sub BTNKiriClick(sender As Object, e As EventArgs) Handles BTNKiri.Click
+    '        If CurrentPage = 1 Then Exit Sub
+    '        FetchData -= 7
+    '        DS.Clear()
+    '        DA.Fill(DS, FetchData, 7, 0)
+    '        CurrentPage -= 1
+    '        Counter()
+    '    End Sub
+
+    '    Private Sub BTNKananClick(sender As Object, e As EventArgs) Handles BTNKanan.Click
+    '        If CurrentPage = Math.Ceiling(DR(0) / 7) Then Exit Sub
+    '        FetchData += 7
+    '        DS.Clear()
+    '        DA.Fill(DS, FetchData, 7, 0)
+    '        CurrentPage += 1
+    '        Counter()
+    '    End Sub
+
+    '    Private Sub DGV_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV.ColumnHeaderMouseClick
+    '        Dim x As Integer = -1
+    '        If e.ColumnIndex = 0 Then
+    '            If x = 0 Then
+    '                DA = New OleDbDataAdapter("SELECT * FROM TBLManusia ORDER BY ID DESC", CONN)
+    '            Else
+    '                DA = New OleDbDataAdapter("SELECT * FROM TBLManusia ORDER BY ID", CONN)
+    '            End If
+    '            x = 0
+    '        ElseIf e.ColumnIndex = 1 Then
+    '            DA = New OleDbDataAdapter("SELECT * FROM TBLManusia ORDER BY Nama", CONN)
+    '        ElseIf e.ColumnIndex = 2 Then
+    '            DA = New OleDbDataAdapter("SELECT * FROM TBLManusia ORDER BY Umur", CONN)
+    '        End If
+
+    '        DS = New DataSet
+    '        DA.Fill(DS, FetchData, 7, 0)
+    '        DGV.DataSource = DS.Tables(0)
+    '    End Sub
+
+    '    Private Sub SortirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SortirToolStripMenuItem.Click
+    '        MsgBox("Awal")
+    '        SuspendLayout()
+    '        MsgBox("Akhir")
+    '        ResumeLayout()
+    '        MsgBox("Tengah")
+    '    End Sub
+
+    '#End Region
+
+#Region "Arr"
+    Dim Arr(99, 1)
+    Dim NoArr As Integer = -1
+
+    Dim FetchData As Integer
+    Dim CurrentPage As Integer = 1
+
+    Sub Counter()
+        TCounterArr.Text = CurrentPage & " / " & Math.Ceiling((NoArr + 1) / 6)
     End Sub
 
-    Private Sub KryptonButton1_Click(sender As Object, e As EventArgs) Handles KryptonButton1.Click
-        Dim Koleksi As New Collection
-        Koleksi.Add(Button1)
-        Koleksi.Add(Button2)
-        Koleksi.Add(DataGridView1)
-        For Each x In Koleksi
-            MsgBox(x.Width)
+    Private Sub BTNTambahArr_Click(sender As Object, e As EventArgs) Handles BTNTambahArr.Click
+        NoArr += 1
+        Arr(NoArr, 0) = TAngka.Text
+        Arr(NoArr, 1) = THuruf.Text
+
+        DGVArr.Rows.Clear()
+        For x = FetchData To FetchData + 5
+            If IsNothing(Arr(x, 0)) Then Exit For
+            DGVArr.Rows.Add(Arr(x, 0), Arr(x, 1))
         Next
+
+        Counter()
     End Sub
-    Dim Waktu As Date
-    Dim ff As Integer
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Waktu = Now
-        KryptonButton1.Text = Format(Waktu, "HH:mm:ss")
-        ff += 1
-        Label1.Text = ff
+
+    Private Sub BTNKiriArr_Click(sender As Object, e As EventArgs) Handles BTNKiriArr.Click
+        If CurrentPage = 1 Then Exit Sub
+        FetchData -= 6
+
+        DGVArr.Rows.Clear()
+        For x = FetchData To FetchData + 5
+            If IsNothing(Arr(x, 0)) Then Exit For
+            DGVArr.Rows.Add(Arr(x, 0), Arr(x, 1))
+        Next
+
+        CurrentPage -= 1
+        Counter()
     End Sub
-    Private Sub KryptonButton1_TextChanged(sender As Object, e As EventArgs) Handles KryptonButton1.TextChanged
-        'If KryptonButton1.Text = MaskedTextBox1.Text Then
-        '    MsgBox("Bingo")
-        'End If
+
+    Private Sub BTNKananArr_Click(sender As Object, e As EventArgs) Handles BTNKananArr.Click
+        If CurrentPage = Math.Ceiling((NoArr + 1) / 6) Then Exit Sub
+        FetchData += 6
+
+        DGVArr.Rows.Clear()
+        For x = FetchData To FetchData + 5
+            If IsNothing(Arr(x, 0)) Then Exit For
+            DGVArr.Rows.Add(Arr(x, 0), Arr(x, 1))
+        Next
+
+        CurrentPage += 1
+        Counter()
     End Sub
+#End Region
 End Class
